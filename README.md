@@ -11,24 +11,9 @@ Traditional methods of detecting viruses and bacteria in blood films rely on man
 
 ##  Pipeline Overview
 
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│   Input Image   │────▶│  Pre-processing │────▶│  Edge Detection │
-│  (Blood Film)   │     │ (Grayscale +    │     │  (Canny Method) │
-└─────────────────┘     │  Rescale +      │     └────────┬────────┘
-                        │   Histogram)    │              │
-                        └─────────────────┘              ▼
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│    Results      │◀────│    Object       │◀────│   Thresholding  │
-│ (RBCs in Red,   │     │  Recognition    │     │  (Otsu Method)  │
-│ Bacteria in Blue│     │ (Circularity    │     └─────────────────┘
-└─────────────────┘     │   Analysis)     │
-                        └─────────────────┘
-                              ▲
-                              │
-                        ┌─────────────────┐
-                        │    Watershed    │
-                        │   Algorithm     │
-                        └─────────────────┘
+<img width="580" height="467" alt="image" src="https://github.com/user-attachments/assets/249c4244-07ff-4da4-ae2c-5eb1b88013af" />
+
+
 
 Tech Stack
 Category	Technologies
